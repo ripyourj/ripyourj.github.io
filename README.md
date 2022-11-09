@@ -1,1 +1,0 @@
-# ripyourj.github.io
