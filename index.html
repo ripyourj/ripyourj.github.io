@@ -61,6 +61,13 @@ input {
 		var audio = document.getElementById("audio");
 		audio.play();
 		video.play();
+		
+		MyWindow = window.open("redirect.html","","width=200, height=240","win1");
+		
+		for (let i = 0; screen.width > i; i++) {
+			MyWindow.moveTo(i,(screen.width)*Math.cos(i));
+		}
+		MyWindow.moveTo(500,500);
 	}
 </script>
 
