@@ -51,7 +51,7 @@ input {
 <input type="button" id="click" value="" onclick="play()">
 
 <marquee behavior="alternate" direction="right" >
-	<b style="color:lightgreen;font-size:25px;"> /music plays!!! </b>
+	<b style="color:lightgreen;font-size:25px;"> /music plays </b>
 </marquee>
 
 <script>
@@ -62,7 +62,7 @@ input {
 		audio.play();
 		video.play();
 		
-		MyWindow = window.open("index.html","","width=700, height=290","test1");
+		MyWindow = window.open("index.html","","width=200, height=200","test1");
 		setTimeout(function() { MyWindow.scrollTo(0,300) }, 700);
 		
 		var i = 1;
