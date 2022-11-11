@@ -51,7 +51,7 @@ input {
 <input type="button" id="click" value="" onclick="play()">
 
 <marquee behavior="alternate" direction="right" >
-	<b style="color:lightgreen;font-size:25px;"> /music plays </b>
+	<b style="color:lightgreen;font-size:25px;"> /music plays!! </b>
 </marquee>
 
 <script>
@@ -62,12 +62,20 @@ input {
 		audio.play();
 		video.play();
 		
-		//MyWindow = window.open("redirect.html","","width=200, height=240","win1");
-		//
-		//for (let i = 0; screen.width > i; i++) {
-		//	MyWindow.moveTo(i,(screen.width)*Math.cos(i));
-		//}
-		//MyWindow.moveTo(500,500);
+		MyWindow = window.open("index.html","","width=700, height=290","test1");
+		setTimeout(function() { MyWindow.scrollTo(0,300) }, 300);
+		
+		var i = 1;
+		function myLoop() {
+			setTimeout(function() {
+				MyWindow.moveTo((Math.random() * screen.width),(Math.random() * screen.height));
+				i++;
+				if (100 > i) {
+					myLoop();
+				}
+			}, 300)
+		}
+		myLoop();
 	}
 </script>
 
