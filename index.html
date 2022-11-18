@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+* {
+	box-sizing: border-box;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+	float: left;
+	width: 33.33%;
+	padding: 10px;
+	height: 100vh;
+}
+
+.rightSide {
+	float: right;
+	width: 33.33%;
+	padding: 10px;
+	height: 100vh;
+}
+
+body {
+	background-image: url("vaporwave_background.jpg");
+	background-size: 100% 100vh;
+}
+ 
+div.center {
+	text-align: center;
+}
+
+input {
+	background-color: limegreen;
+	background: url("blackbackground.jpg");
+	background-size: 100% 100vh;
+	height: 100vh;
+	width: 100%;
+}
+
+</style>
+</head>
+<body scroll="no" style="overflow: hidden">
+
+<input type="button" id="click" value="" onclick="play()">
+
+<marquee behavior="alternate" direction="right" >
+	<b style="color:darkpurple;font-size:25px;"> /music plays/ </b>
+</marquee>
+
+<script>
+
+	function play() {
+		var elem = document.getElementById('click');
+		elem.parentNode.removeChild(elem);
+		var audio = document.getElementById("audio");
+		audio.play();
+		video.play();
+	}
+	
+</script>
+
+<div class="row">
+
+  <div class="column">
+    <marquee behavior="scroll" direction="down" height=100%>
+		<img src="vaporwave_background.jpg">
+	</marquee>
+  </div>
+  
+  <div class="column">
+	<audio loop id="audio" src="Electric_Avenue.mp3"></audio>
+	<div class='center'>
+		<video autoplay="autoplay" width=100% height=200% loop muted id="video" src="faster_dance.mp4"></video>
+	</div>
+  </div>
+  
+  <div class="rightSide">
+    <marquee behavior="scroll" direction="down" height=100%>
+		<img src="vaporwave_background.jpg">
+	</marquee>
+  </div>
+  
+</div>
+
+</body>
+</html>
